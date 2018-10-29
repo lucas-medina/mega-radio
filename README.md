@@ -1,4 +1,4 @@
-# MegaRadio
+# Mega Radio
 A radio for playing Mega Man music, through the Youtube Video API.
 ![Megaman Radio](http://4.bp.blogspot.com/-YNg8_Ubximc/U3taIm7E-GI/AAAAAAAAHEc/RBXMBm-H9Ps/s1600/mega+man+2.png)
 
