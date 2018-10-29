@@ -1,27 +1,28 @@
 # MegaRadio
+A radio for playing Mega Man music, through the Youtube Video API.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+## Sections
+- **Why?**
+- **Checklist**
 
-## Development server
+## Why?
+In order to learn more about Angular apps, while also having some fun while maintaining my passion for both Mega Man and music alike, I've decided to create this small project. While I could just search around for musics on YouTube, I feel like I really should give this a try, and make some kind of sanctuary for Mega Man music, and then we go!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Checklist
+In order for this project to happen, I need these basic stories to be done:
+- Integration with YouTube API
+- Always display the video (since not showing goes against YouTube API's rules)
+- Allow the user to listen 24/7, by playing the songs at the lowest quality as default, shuffling and playing random music
 
-## Code scaffolding
+After those main stories are done, these ones need to be implemented:
+- Allow the user to select which game OST they want to hear
+- Allow the user to select specific themes or categories of music (boss songs, stage themes, final boss songs, classic only, X only)
+- Allow the user to create their own playlists with infinite amount of music capability
+- Player must have all YouTube functionalities, as well as loop, crossfade and timer functionality
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+And then some extras:
+- User can click on the game's logo, to be redirected to Amazon to buy the game, via Amazon API
+- Player can enable extended versions of the music (let's hope for it)
+- Player can play song at different speeds
+- Enable Player to play fanmande songs available on YouTube (as long as I can get some of them on the list)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
