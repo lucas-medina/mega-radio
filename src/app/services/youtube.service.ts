@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../@core/services/http.service';
-import YouTubePlayer from 'youtube-player';
+import { PlayerService } from './player.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class YoutubeService {
 
-  public ytScript;
-  public ytPlayer;
-  public yt = YouTubePlayer;
+  public ytScript: any;
+  public yt: any;
 
   constructor(
-    private _http: HttpService
+    private _http: HttpService,
+    private _player: PlayerService
   ) { }
 
   getBaseYouTubeVideoList() {
@@ -25,14 +25,23 @@ export class YoutubeService {
     document.body.appendChild(this.ytScript);
   }
 
-  public ytReadyApiIntegration() {
+  public ytAwaitReadyApiIntegration() {
     (<any>window).onYouTubeIframeAPIReady = () => {
-      this.ytPlayer = new (<any>window).YT.Player()
+      this.yt = (<any>window).YT;
+      this._player.player = this.yt.Player(this._player.playerClass, {
+        videoId: 'NUbdmaDr7WE',
+        events: {
+          'onError': (err) => console.log(err),
+          'onReady': (e) => {
+            console.log('ready here');
+          }
+        }
+      });
     }
   }
 
   ytGetVideo(_code: string) {
-    this._http.post(_code, );
+    // this._http.post(_code, );
   }
 
 }

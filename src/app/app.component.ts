@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { YoutubeService } from './services/youtube.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mega-radio';
+
+  constructor(
+    public _youtube: YoutubeService
+  ) {
+
+  }
+
+
+
 }
